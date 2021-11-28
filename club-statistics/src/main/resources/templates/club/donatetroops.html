@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>捐收比情况</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>捐兵情况统计表</tr>
+    <tr>
+        <th>成员名字</th>
+        <th>本月捐兵数</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="member:${members}">
+        <td th:text="${member.getName()}"></td>
+        <td th:text="${member.getDonations()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

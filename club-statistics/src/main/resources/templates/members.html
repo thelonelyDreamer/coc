@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>部落成员</title>
+</head>
+<body>
+<table>
+
+    <tbody>
+    <tr th:each="member:${members}">
+        <td>
+            <a th:href="@{'/player/'+${member.tag.substring(1)}}" th:text="${member.tag}"></a>
+        </td>
+        <td th:text="${member.name}"></td>
+        <td th:text="${member.trophies}"></td>
+        <td th:text="${member.versusTrophies}"></td>
+        <td th:text="${member.donations}"></td>
+        <td th:text="${member.donationsReceived}"></td>
+        <td th:text="${member.role}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
