@@ -21,7 +21,7 @@ import java.util.function.Predicate;
  * @author wangchao
  */
 @Controller
-@RequestMapping("/club")
+@RequestMapping("club")
 @AllArgsConstructor
 public class SingleClubController {
     private SingleClubService singleClubService;
@@ -49,7 +49,7 @@ public class SingleClubController {
             }
         });
         model.addAttribute("members",clubMember);
-        return "/club/donatetroops";
+        return "club/donatetroops";
 
     }
 }

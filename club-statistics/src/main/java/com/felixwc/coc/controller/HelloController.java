@@ -7,6 +7,7 @@ import com.felixwc.coc.service.coc.ClubsService;
 import com.felixwc.coc.service.coc.SingleClubService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,5 +43,12 @@ public class HelloController {
         a.getList().add(b);
         b.getList().add(a);
         return a;
+    }
+
+
+    @GetMapping("/num/{id}")
+    public String test(@PathVariable int id){
+
+        return new Integer(id).toString();
     }
 }
